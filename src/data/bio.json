@@ -1,0 +1,17 @@
+{
+  "nombre": "Nombre",
+  "apellido": "Apellido",
+  "experiencia": "Programador web full-stack | React, Node, JS",
+  "bioShort": "Me gusta <strong>resolver problemas!</strong>",
+  "bio": "<p>Me gusta resolver problemas. 🤖</p><p>Llevo programando varios años.</p>",
+  "en": {
+    "nombre": "Nombre",
+    "apellido": "Apellido",
+    "experiencia": "Full-stack ... | React, Node, JS",
+    "bioShort": "Me gusta <strong>resolver problemas!</strong>",
+    "bio": "<p>Me gusta resolver problemas. 🤖</p><p>Llevo programando varios años.</p>"
+  },
+  "es": {
+
+  }
+}
