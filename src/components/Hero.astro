@@ -1,13 +1,8 @@
 ---
-// Variables desde JSON
-import data from "../data/bio.json";
-import contacto from "../data/contacto.json";
-
-const { nombre, apellido, experiencia, bioShort, bio } = data;
-const { email } = contacto; // no sacamos tlf
-
-const nombreCompleto = `${nombre}, ${apellido}`;
-//
+import getData from "@/utils/getData";
+const { biografia, contacto, nombreCompleto } = getData();
+const { experiencia, bioShort, bio } = biografia;
+const { email } = contacto; // TODO: solicitar desde getData() directamente sin params
 
 import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
