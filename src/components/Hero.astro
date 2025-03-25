@@ -1,9 +1,18 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
+// Variables desde JSON
+import data from "../data/bio.json";
+import contacto from "../data/contacto.json";
+
+const { nombre, apellido, experiencia, bioShort, bio } = data;
+const { email } = contacto; // no sacamos tlf
+
+const nombreCompleto = `${nombre}, ${apellido}`;
+//
+
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
 ---
 
 <div class="max-w-xl">
@@ -11,7 +20,7 @@ import SocialPill from "@/components/SocialPill.astro"
     <img
       class="rounded-full shadow-lg size-16"
       src="/midudev.webp"
-      alt={personalImageAlt}
+      alt={nombreCompleto}
     />
     <a
       href="https://linkedin.com/in/midudev"
@@ -25,22 +34,26 @@ import SocialPill from "@/components/SocialPill.astro"
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy midudev
+    <!-- Hey, soy {nombre} -->
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +15 años de experiencia. <strong
-      >Ingeniero de Software y Creador de Contenido sobre Programación</strong
-    > de Barcelona, España 🇪🇸. Especializado en el desarrollo de aplicaciones web
-    únicas.
+    <strong>
+      {experiencia} 🤖
+    </strong>
   </p>
+
+  <p set:html={bioShort} />
+
+  <div set:html={bio} />
+
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
+    <SocialPill href=`mailto:${email}`>
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
+    <SocialPill href="https://linkedin.com/in/#">
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
