@@ -1,3 +1,16 @@
+Proyecto basado en el [original](https://github.com/midudev/porfolio.dev) de [@midudev](https://github.com/midudev/) 👋🏼
+
+# Cómo usar
+
+- Se necesita Node
+- `npm i -g pnpm`
+```bash
+pnpm install
+pnpm run dev
+```
+
+---
+
 # 👨🏻‍💻 Porfolio para programadores y desarrolladores
 
 <div align="center">
