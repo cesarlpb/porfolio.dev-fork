@@ -15,6 +15,7 @@ const extendedData = {
 type BaseData = typeof data;
 type ExtendedData = typeof extendedData;
 
+// TODO: implementar como singleton
 export default function getData(): ExtendedData {
   // TODO: podría pasar todos los datos o solo lo que me solicitan
   // ¿De qué forma podemos solicitar solo lo que necesitamos?
